@@ -1,15 +1,5 @@
 const collectInputs = require("./collectInputs")
 
-const collectData = async () => {
-    try {
-        return await collectInputs.getInput('firstDayInput')
-      }
-      catch (e) {
-        return 'caught';
-      }
-    
-}
-
 const checkDepth = (array) => {
     let endProduct = 0
     let number = 0
@@ -35,7 +25,7 @@ const checkThreeSum = (array) => {
 }
 
 (async () => {
-    const finalData = await collectData()
+    const finalData = await collectInputs.getInput('firstDayInput.txt')
     const arr = finalData.split('\n').map(function(item){
         return parseInt(item, 10)
     })
